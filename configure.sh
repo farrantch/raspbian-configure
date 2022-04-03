@@ -9,6 +9,9 @@ grep -qxF '@xset s noblank' /etc/xdg/lxsession/LXDE-pi/autostart || echo '@xset 
 grep -qxF '@xset s off' /etc/xdg/lxsession/LXDE-pi/autostart || echo '@xset s off' >> /etc/xdg/lxsession/LXDE-pi/autostart            
 grep -qxF '@xset -dpms' /etc/xdg/lxsession/LXDE-pi/autostart || echo '@xset -dpms' >> /etc/xdg/lxsession/LXDE-pi/autostart
 
+# Boot To CLI and Disable Auto-Login
+raspi-config nonint do_boot_behaviour B1
+
 # Install RetroPie
 cd /tmp/
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
