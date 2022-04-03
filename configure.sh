@@ -13,7 +13,8 @@ grep -qxF '@xset -dpms' /etc/xdg/lxsession/LXDE-pi/autostart || echo '@xset -dpm
 raspi-config nonint do_boot_behaviour B1
 
 # Install RetroPie
-cd /tmp/
+mkdir /opt/retropie/
+cd /opt/retropie/
 git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
 cd RetroPie-Setup
 chmod +x retropie_setup.sh
