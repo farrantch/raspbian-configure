@@ -2,7 +2,7 @@
 apt update
 
 # Install packages
-apt install git lsb-release firefox-esr -y
+apt install git lsb-release p7zip-full firefox-esr -y
 
 # Disable Screensaver
 grep -qxF '@xset s noblank' /etc/xdg/lxsession/LXDE-pi/autostart || echo '@xset s noblank' >> /etc/xdg/lxsession/LXDE-pi/autostart
