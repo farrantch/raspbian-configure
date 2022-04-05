@@ -11,6 +11,8 @@ grep -qxF '@xset -dpms' /etc/xdg/lxsession/LXDE-pi/autostart || echo '@xset -dpm
 
 # Boot To CLI and Disable Auto-Login
 raspi-config nonint do_boot_behaviour B1
+# Set GPU memory
+raspi-config nonint do_memory_split 256
 
 # Install RetroPie
 mkdir /opt/retropie/
